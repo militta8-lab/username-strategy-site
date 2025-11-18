@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Telegram Usernames Strategy – $USERSTR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: sans-serif;
+      background:#02030a;
+      color:#fff;
+      margin:0;
+      padding:0;
+    }
+    .lang-switch {
+      position: fixed;
+      top: 14px;
+      right: 14px;
+      z-index: 999;
+    }
+    .lang-btn {
+      padding: 6px 12px;
+      background: #0f172a;
+      border: 1px solid #4ade80;
+      color: #4ade80;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .lang-btn:hover {
+      background:#4ade80;
+      color:#000;
+    }
+
+    .section {
+      padding:40px;
+      max-width:900px;
+      margin:auto;
+    }
+    h1,h2 { margin-top:0; }
+    a { color:#4ade80; }
+  </style>
+</head>
+
+<body>
+
+<!-- LANGUAGE SWITCH -->
+<div class="lang-switch">
+  <button class="lang-btn" onclick="toggleLanguage()">RU</button>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content"></div>
+
+<script>
+// TEXT LIBRARY
+const TEXTS = {
+  en: {
+    heroTitle: `A token backed by <span style="color:#7CFF4F">scarcity of Telegram usernames</span>`,
+    heroSubtitle: `
+      <strong>$USERSTR</strong> is not just a meme token.
+      Treasury buys rare Telegram usernames, lists them with <strong>25% markup</strong>,
+      and sends profit into <strong>buyback & burn</strong>.
+    `,
+    howTitle: "How Telegram Usernames Strategy works",
+    how1: "Every buy/sell generates fees that form the treasury.",
+    how2: "Treasury buys undervalued usernames and relists them with 25% markup.",
+    how3: "All profit goes into buying and burning $USERSTR.",
+    numbersTitle: "Market, flow & tokenomics",
+    faqTitle: "FAQ & common doubts",
+    faq1q: "Why does this model work?",
+    faq1a: "Telegram usernames market already has millions in monthly volume. We connect to this existing flow.",
+    ctaTitle: "Ready to front-run the usernames meta?",
+    ctaSub: "Join the Telegram channel and track buybacks, treasury and burns.",
+    joinBtn: "Join Telegram",
+    buyBtn: "Buy $USERSTR",
+  },
+
+  ru: {
+    heroTitle: `Токен, подкреплённый <span style="color:#7CFF4F">дефицитом Telegram-юзернеймов</span>`,
+    heroSubtitle: `
+      <strong>$USERSTR</strong> — это не просто мем-токен.
+      Казна выкупает редкие usernames, выставляет их с <strong>наценкой 25%</strong>,
+      а прибыль направляет в <strong>откуп и сжигание</strong>.
+    `,
+    howTitle: "Как работает стратегия Telegram Usernames",
+    how1: "Каждая покупка и продажа пополняют казну комиссии.",
+    how2: "Казна выкупает недооценённые usernames и перелистывает с наценкой 25%.",
+    how3: "Весь профит идёт на откуп и сжигание $USERSTR.",
+    numbersTitle: "Рынок, потоки и токеномика",
+    faqTitle: "FAQ и ответы на частые вопросы",
+    faq1q: "Почему эта модель работает?",
+    faq1a: "Рынок usernames сам по себе огромный — мы подключаемся к существующему потоку.",
+    ctaTitle: "Готов присоединиться к usernames-мете?",
+    ctaSub: "Подписывайся и следи за откупом, казной и сжиганием токена.",
+    joinBtn: "Перейти в Telegram",
+    buyBtn: "Купить $USERSTR",
+  }
+};
+
+let lang = "en";
+
+// RENDER FUNCTION
+function render() {
+  const t = TEXTS[lang];
+
+  document.getElementById("content").innerHTML = `
+    <div class="section">
+      <h1>${t.heroTitle}</h1>
+      <p>${t.heroSubtitle}</p>
+      <p>
+        <a href="#">${t.buyBtn}</a> · 
+        <a href="#">${t.joinBtn}</a>
+      </p>
+    </div>
+
+    <div class="section" style="background:#0f172a;border-radius:10px;">
+      <h2>${t.howTitle}</h2>
+      <ul>
+        <li>${t.how1}</li>
+        <li>${t.how2}</li>
+        <li>${t.how3}</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>${t.numbersTitle}</h2>
+      <p>Coming soon…</p>
+    </div>
+
+    <div class="section" style="background:#0f172a;border-radius:10px;">
+      <h2>${t.faqTitle}</h2>
+      <p><strong>${t.faq1q}</strong></p>
+      <p>${t.faq1a}</p>
+    </div>
+
+    <div class="section">
+      <h2>${t.ctaTitle}</h2>
+      <p>${t.ctaSub}</p>
+      <a href="#">${t.joinBtn}</a>
+    </div>
+  `;
+}
+
+// SWITCH LANGUAGE
+function toggleLanguage() {
+  lang = lang === "en" ? "ru" : "en";
+  document.querySelector(".lang-btn").innerText = lang === "en" ? "RU" : "EN";
+  render();
+}
+
+render();
+</script>
+
+</body>
+</html>
