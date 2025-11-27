@@ -122,10 +122,24 @@ const TEXTS = {
       text:
         "Instead of inflation and endless emissions, the model focuses on compressing supply via regular buyback & burn streamed from usernames trading profit.",
       items: [
-        { label: "Treasury usage", value: "100% → usernames" },
-        { label: "Usernames markup", value: "+25% base" },
-        { label: "Profit destination", value: "Buyback & burn" },
-        { label: "Narrative", value: "Scarcity powered by usernames" },
+        { label: "Treasury usage", value: "100% → usernames", progress: 100 },
+        { label: "Usernames markup", value: "+25% base", progress: 78 },
+        { label: "Profit destination", value: "Buyback & burn", progress: 96 },
+        { label: "Narrative", value: "Scarcity powered by usernames", progress: 88 },
+      ],
+    },
+    nfts: {
+      kicker: "NFT grid",
+      title: "Username NFTs we watch",
+      subtitle:
+        "Illustrative grid of usernames and collections that set the tempo. Cards reveal one by one to mirror how treasury snipes entries.",
+      items: [
+        { title: "@matrix", tag: "4L rare", note: "High floor, thin liquidity" },
+        { title: "@future", tag: "premium", note: "Tracked by whales" },
+        { title: "@alpha", tag: "greek", note: "Fast flips, steady demand" },
+        { title: "@orbit", tag: "collection", note: "Bundled deal flow" },
+        { title: "@storm", tag: "english", note: "Perfect for brand kits" },
+        { title: "@quant", tag: "trader", note: "Data-driven narrative" },
       ],
     },
     faq: {
@@ -287,10 +301,24 @@ const TEXTS = {
       text:
         "Модель делает ставку не на инфляцию и вечные эмиссии, а на сжатие предложения через регулярный buyback & burn из профита казны usernames.",
       items: [
-        { label: "Использование казны", value: "100% → usernames" },
-        { label: "Наценка на usernames", value: "от +25%" },
-        { label: "Назначение профита", value: "Откуп и сжигание" },
-        { label: "Нарратив", value: "Дефицит за счёт usernames" },
+        { label: "Использование казны", value: "100% → usernames", progress: 100 },
+        { label: "Наценка на usernames", value: "от +25%", progress: 78 },
+        { label: "Назначение профита", value: "Откуп и сжигание", progress: 96 },
+        { label: "Нарратив", value: "Дефицит за счёт usernames", progress: 88 },
+      ],
+    },
+    nfts: {
+      kicker: "NFT сетка",
+      title: "NFT-юзернеймы, за которыми следим",
+      subtitle:
+        "Показательный грид usernames и коллекций, которые задают тон. Карточки появляются по очереди — как и сделки казны.",
+      items: [
+        { title: "@matrix", tag: "4L rare", note: "Высокий floor, мало ликвидности" },
+        { title: "@future", tag: "premium", note: "Замечен в кошельках китов" },
+        { title: "@alpha", tag: "greek", note: "Быстрые флипы, стабильный спрос" },
+        { title: "@orbit", tag: "collection", note: "Пакетные сделки" },
+        { title: "@storm", tag: "english", note: "Идеален для брендовых наборов" },
+        { title: "@quant", tag: "trader", note: "Нарратив на данных" },
       ],
     },
     faq: {
